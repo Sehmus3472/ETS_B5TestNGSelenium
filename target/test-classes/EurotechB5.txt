@@ -1,0 +1,10 @@
+Hello World!
+
+Eurotech B5 is here
+
+C:\Users\sehmu\ETS_B5TestNGSelenium/src/test/resources/EurotechB5.txt
+
+
+
+
+

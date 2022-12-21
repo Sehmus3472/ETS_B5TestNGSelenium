@@ -1,0 +1,10 @@
+
+
+               Soru:  Bir test otomasyonu yapabilmek icin hangi enstrümanlara ihtiyac duyariz?
+
+               a) Programlama dili yani JAVA
+               b) ide(intelije)
+               c) Build Tool-Mavien
+               d) framework (cerceve): kendine özgü krallari olan o kurallar cercevesinde kodlarimizi yazmaya
+                    yarayan kurallar bütünü deyebiliriz.(Junit,TestNG,Cucumber)
+

@@ -1,0 +1,30 @@
+
+
+
+    Web Elements 2
+
+
+     ! FindElements :
+      	- We are traying to locate one element until now. We learned how to locate multiple elements  and interact with
+
+    	// Şimdiye kadar bir elementi bulmaya çalışıyoruz. Birden fazla öğeyi nasıl konumlandıracağımızı ve
+    	    bunlarla nasıl etkileşime gireceğimizi öğrendik.
+
+     ! List of Elements;
+    	- driver.findElements()
+    	- We are using one locator but with this we get one more than one element --> Bir konumlandırıcı kullanıyoruz
+    	    ama bununla birden fazla eleman elde ediyoruz
+    	- Find comman locators for the elements that you want to locate --> Bulmak istediğiniz öğeler için ortak konumlandırıcıları bulun
+    	- We Locate to element in one shot --> Öğeyi tek seferde buluyoruz
+    	- Pass your locator to findElements() method --> Bulucunuzu findElements() yöntemine iletin
+    	- List<WebElement> elements = driver.findEleents(By...)
+    	- if you use findelements(),check first size --> findelements() kullanıyorsanız, ilk boyutu kontrol edin
+    	-Because,it returns true even if your locator is false  --> menuList.size()=0  __> Çünkü bulucunuz yanlış olsa bile true
+    	                                                                    değerini döndürür.
+        - findElements() --> does NOT throw NoSuchElementException if your locator wrong it will return empty list. -->
+         	                     bulucunuz yanlışsa NoSuchElementException ATILMEZ, boş liste döndürür.
+
+     ! DropDown:	We Have 2 different way to handle dropdown
+     		 - Select class :  if dropdown has select class it will easy --> açılır menü seçme sınıfına sahipse kolay olacaktır
+     					   select class comes from selenium --> seçme sınıfı selenyumdan geliyor
+     					   usually only one is allowed to choose --> genellikle sadece birinin seçmesine izin verilir

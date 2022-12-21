@@ -1,0 +1,69 @@
+
+
+
+    Pop ups: Sayfa üzerinde acila kücük ekstra sayfalardir. Genelde reklam sayfalaridir.Bunun iki türü vardir.
+             1) HTML pop ups dir. Bunlar sayfa üzerinde acilan tikladiginda gecip gider.Yani yazilis koduna gidebilir.
+             2) JavaScript Alert pop ups ise üstünü tiklayinca gecip girmiyor. Bunu inspek yapamayiz yada click yapamayiz.
+
+
+
+             Pop Ups, Multiple Windows, Iframe
+             Pop Ups
+             Pop ups, modal, alerts, dialog, overlay —> anything pop ups on the web.
+             we have 2 different way of handling pop ups, based on their structure
+
+             HTML pop ups
+             if the pop up is from HTML ve deal it as if it another another web element
+
+             JavaScript Alert
+             They come from JavaScript, mostly known as js alerts.
+             Was can Not click on those alerts to see the html (inspect)
+             To deal with non HTML alerts we have a class from selenium Which is Alert
+             How to point alert ?
+             Alert alert=driver.switchTo().alert() ; —> it is from Selenium
+             And we have accept, dismiss, senKeys and getText method for alerts.
+             alert.accept() ;
+             alert.dismiss() ;
+             alert.sendKeys("Eurotech Batch 5") ;
+             alert.getText()) ;
+             if there is no alert on the web page and we try to switch :
+             NoAlertPresentException: no such alert
+             Multiple Windows
+             Tab and Windows
+             In selenium there is no difference between tabs and windows.
+             By default selenium controls one html page
+             When we open the page first time it points that it points that page only
+             When we open new tab/window, it will still be looking at the old windows
+             To do any injection with new window we have to swithc to the new window
+             Day10-Type Of Web Elements 32driver.getWindowHandle()) ; -→ this return some unique code belongs
+             the current windows that we open with driver.get()
+             Handle —> unique identifier for windows
+             driver.getWindowHandles() ; — > return the set of string IDs the all open windows
+
+             Day10-Type Of Web Elements 33Iframe
+             No Such Element Exception
+             1- Locator might be wrong or dynamic or not correct
+             2- Not enough wait time
+             3- There is a frame or iframe
+             In html we can have one HTML page inside to another.
+             This is made possible by tag <iframe> or <frame>.
+             Using frames we can put inside the HTML.
+             When we have with frames, selenium can not control what is
+             inside the frame.
+             We have to switch iframe first.
+             When we switch to iframe it will not see the default page, until we
+             switched back.
+             We can only switch one at a time and cannot switch to grandchild
+             directly.
+             can not switch to siblings only parent to child.
+             HTML
+             0 frame-top parent
+             0 left
+             1 middle
+             2 right
+             1. 1HTML—>frame-top —> right
+             2. right—>frame-top—>left
+             3. left—> frame-top-middle
+             1 frame-bottom parent
+             4. middle—>frame top—>HTML—>frame-bottom
+             if you use defaultContent() —> it will start from HTML
